@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html class="no-js  page-17 app-LIVESQL" lang="en" >
+<head>
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <title>My Scripts - Oracle Live SQL</title>
+  <link rel="stylesheet" href="/i/app_ui/css/Core.min.css?v=22.1.3" type="text/css" />
+<link rel="stylesheet" href="/i/app_ui/css/Theme-Standard.min.css?v=22.1.3" type="text/css" />
+
+  <link rel="stylesheet" href="/i/libraries/font-apex/2.2.1/css/font-apex.min.css?v=22.1.3" type="text/css" />
+<link rel="stylesheet" href="/i/themes/theme_42/22.1/css/Core.min.css?v=22.1.3" type="text/css" />
+
+  
+  <link rel="stylesheet" href="/i/themes/theme_42/22.1/css/Vita.min.css?v=22.1.3" type="text/css" />
+
+  <link rel="stylesheet" href="r/livesql/590/files/static/v486/css/livesql.min.css" type="text/css" />
+
+  
+  <link rel="apple-touch-icon" href="r/livesql/590/files/static/v486/icons/app-icon-192.png" /><link rel="icon" href="r/livesql/590/files/static/v486/icons/app-icon-32.png" />
+  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="-1" /><meta http-equiv="Cache-Control" content="no-cache" /><meta name="theme-color" content="&#x23;000000" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="&#x3C;span&#x20;class&#x3D;&#x22;u-vh&#x22;&#x3E;Oracle&#x3C;&#x2F;span&#x3E;&#x20;&#x26;APPLICATION_TITLE." />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<link rel="manifest" href="&#x2F;apex&#x2F;r&#x2F;livesql&#x2F;livesql&#x2F;manifest.json&#x3F;v&#x3D;22.1.3-146472856932&#x26;lang&#x3D;en" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="BUM28-7GUGJ-B7YY7-XUSPX-EJ96D",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"BUM28-7GUGJ-B7YY7-XUSPX-EJ96D";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="nlolz6t57tn7szugqoxq-f-e490981c5-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"37","ak.cp":"881309","ak.ai":parseInt("562634",10),"ak.ol":"0","ak.cr":98,"ak.ipv":4,"ak.proto":"h2","ak.rid":"475d60e7","ak.r":44715,"ak.a2":n,"ak.m":"dscx","ak.n":"essl","ak.bpcip":"106.220.188.0","ak.cport":20656,"ak.gh":"23.44.214.12","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1720091567","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==duE057R74yl8YnsHIttYe8T3CBVESvJ+fV8BLfi8Ac/eT/AIUbPRtFoxYcP/oS8iHmMPEYTnUiP1amQ6Rp+Ri7Lv2pZjDNWieZLfq/lyaKZIhQmJBe+uihqg4/MakFy2MSKNS4IwDUzUIshdgu5JSpS4iOa0rnhLHGxn5Cdygy6XPYAfJLw/9mmejutJ9aGTI9n5HUFJ0Gq0kCKU2dk462tLj1+v6xNMxn2TgtqUi3B3NnOe81sfMZdJBc2mqYWpUkvDbwXJMiCJKj9jCNTEccMptdyQY+NR3O2tDAcpf5Z1khvs6ACGrq8BRLp/ne3HpzK3xBwEYzWqayUY1qsOclLD0oakDpkbjzEF1C9EPnk+vWlbuDyj68WzfGs17PzJAvEzszr8b0GjPJK93lMRINfoXY/rj/M4OAY3iAQ10Zc=","ak.pv":"13","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body class="t-PageBody t-PageBody--showLeft t-PageBody--hideActions no-anim t-PageTemplate--leftCol   apex-side-nav apex-icons-fontapex apex-theme-vita"   id="t_PageBody">
+<a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
+<form action="wwv_flow.accept?p_context=590:17:6063534202658" method="post" name="wwv_flow" id="wwvFlowForm" data-oj-binding-provider="none" novalidate >
+<input type="hidden" name="p_flow_id" value="590" id="pFlowId" /><input type="hidden" name="p_flow_step_id" value="17" id="pFlowStepId" /><input type="hidden" name="p_instance" value="6063534202658" id="pInstance" /><input type="hidden" name="p_page_submission_id" value="247776180433752718083684567803545060925" id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><input type="hidden" name="p_reload_on_submit" value="A" id="pReloadOnSubmit" /><input type="hidden" value="590&#x3A;17&#x3A;6063534202658" id="pContext" /><input type="hidden" value="247776180433752718083684567803545060925" id="pSalt" />
+<header class="t-Header" id="t_Header" role="banner">
+  
+  <div class="t-Header-branding">
+    <div class="t-Header-controls">
+      <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" aria-label="Main Navigation" title="Main Navigation" id="t_Button_navControl" type="button"><span class="t-Header-controlsIcon" aria-hidden="true"></span></button>
+    </div>
+    <div class="t-Header-logo">
+      <a href="f?p=590:1000:6063534202658:::::" class="t-Header-logo-link"><img src="r&#x2F;livesql&#x2F;590&#x2F;files&#x2F;static&#x2F;v486&#x2F;images&#x2F;oracle-logo.svg" alt="" class="apex-logo-img" /><span class="apex-logo-text"><span class="u-vh">Oracle</span> Live SQL</span></a>
+      
+    </div>
+    <div class="t-Header-navBar">
+      <div class="t-Header-navBar--start"></div>
+      <div class="t-Header-navBar--center"><ul class="t-NavigationBar " id="3263937843120997057"><li class="t-NavigationBar-item ">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="javascript:apex.theme42.dialog('f?p=590:44:6063534202658::::P44_PAGE_ID:17\u0026cs=32lvJykDkvUYKdoKFQuurrNnYIvmXSOz1a3SSyXS-mrAFVVnOz03ubtTtmGyHroQVHm3e6Lns44RVBHYAuhkWfQ\u0026p_dialog_cs=nzV9PKhE85mjzBzz6k9MOB61eSixdx-I-vCAK1raWm-AeFmyyEhUwJ_040wlHHdTRHXQRkgBLYT4pjkMycgVQg',{title:'Submit Feedback',h:'auto',w:'720',mxw:'960',modal:true,dialog:null,dlgCls:'t-Dialog-page--standard '+''},'',apex.gPageContext$)" title="" target="">
+    <span class="t-Icon fa&#x20;fa-comment-o" aria-hidden="true" ></span><span class="t-Button-label">Feedback</span><span class="t-Button-badge"></span>
+  </a>
+</li><li class="t-NavigationBar-item ">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="f?p=590:HELP:6063534202658:::::" title="" target="">
+    <span class="t-Icon a-Icon&#x20;icon-help" aria-hidden="true" ></span><span class="t-Button-label">Help</span><span class="t-Button-badge"></span>
+  </a>
+</li><li class="t-NavigationBar-item has-username">
+  <button class="t-Button t-Button--icon t-Button t-Button--header t-Button--navBar js-menuButton" type="button" id="L7178662666532670" data-menu="menu_L7178662666532670" title="">
+      <span class="t-Icon a-Icon&#x20;icon-user" aria-hidden="true" ></span><span class="t-Button-label">BHUMIKAMBLE714@GMAIL.COM</span><span class="t-Button-badge"></span><span class="a-Icon icon-down-arrow" aria-hidden="true"></span>
+  </button><div class="t-NavigationBar-menu" style="display: none" id="menu_L7178662666532670"><ul><li class="" data-current="false" data-icon=""><a href="javascript:apex.theme42.dialog('f?p=590:8:6063534202658:::RP\u0026p_dialog_cs=4sKDm0v_BVxvA6X0xM_NakHteXIXpgyAq2VA2f18yH1ELJx_jij63s5JcxuwcNsth6kvWq0sbQf0RKRGGnZmyA',{title:'Notifications',h:'auto',w:'720',mxw:'960',modal:true,dialog:null,dlgCls:'t-Dialog-page--standard '+''},'',apex.gPageContext$)" title="" target="">Notifications</a></li><li class="" data-current="false" data-icon=""><a href="apex_authentication.logout?p_app_id=590&p_session_id=6063534202658" title="" target="">Sign Out</a></li></ul></div></li></ul></div>
+      <div class="t-Header-navBar--end"><div class="t-Form-fieldContainer t-Form-fieldContainer--hiddenLabel rel-col ls-darkmode-switch apex-item-wrapper apex-item-wrapper--yes-no " id="P0_DARKMODE_CONTAINER"><div class="t-Form-labelContainer t-Form-labelContainer--hiddenLabel col col-null">
+<label for="P0_DARKMODE" id="P0_DARKMODE_LABEL" class="t-Form-label u-VisuallyHidden">Dark Mode</label>
+</div><div class="t-Form-inputContainer col col-null"><div class="t-Form-itemWrapper"><span class="a-Switch"><input type="checkbox"  id="P0_DARKMODE" name="P0_DARKMODE" value="Y" data-on-label="On" data-off-value="N" data-off-label="Off" ><span class="a-Switch-toggle"></span></span></div><span id="P0_DARKMODE_error_placeholder" class="a-Form-error" data-template-id="3114753988868898_ET"></span></div></div></div>
+    </div>
+  </div>
+  <div class="t-Header-nav"></div>
+</header>
+<div class="t-Body">
+  <div class="t-Body-nav" id="t_Body_nav" role="navigation" aria-label="Main Navigation">
+  <div class="a-TreeView t-TreeNav js-defaultCollapsed js-defaultCollapsed js-navCollapsed--hidden t-TreeNav--classic" id="t_TreeNav" data-id="17_tree" aria-label="Main Navigation">
+    <ul>
+<li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-home" data-shortcut="">
+  <a href="f?p=590:1000:6063534202658:::::" title="" style="display: none" target="">Home</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-home"></span>
+      <span class="a-TreeView-label">Home</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-terminal" data-shortcut="">
+  <a href="f?p=590:1:6063534202658:::::" title="" style="display: none" target="">SQL Worksheet</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-terminal"></span>
+      <span class="a-TreeView-label">SQL Worksheet</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-bars" data-shortcut="">
+  <a href="f?p=590:6:6063534202658:::::" title="" style="display: none" target="">My Session</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-bars"></span>
+      <span class="a-TreeView-label">My Session</span>
+    </div>
+  </div>
+<ul style="display:none"><li data-id="" data-disabled="" data-icon="" data-shortcut=""><a href="f?p=590:25:6063534202658:::::" title="" target="">Previous Sessions</a></li><li data-id="" data-disabled="" data-icon="" data-shortcut=""><a href="f?p=590:21:6063534202658:::::" title="" target="">Previously Viewed</a></li><li data-id="" data-disabled="" data-icon="" data-shortcut=""><a href="f?p=590:22:6063534202658:::::" title="" target="">Utilization</a></li><li data-id="" data-disabled="" data-icon="" data-shortcut=""><a href="f?p=590:23:6063534202658:::::" title="" target="">NLS</a></li></ul></li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-database" data-shortcut="">
+  <a href="f?p=590:71:6063534202658:::::" title="" style="display: none" target="">Schema</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-database"></span>
+      <span class="a-TreeView-label">Schema</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-magic" data-shortcut="">
+  <a href="f?p=590:800:6063534202658:::::" title="" style="display: none" target="">Quick SQL</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-magic"></span>
+      <span class="a-TreeView-label">Quick SQL</span>
+    </div>
+  </div>
+<ul style="display:none"><li data-id="" data-disabled="" data-icon="" data-shortcut=""><a href="f?p=590:805:6063534202658:::::" title="" target="">My Models</a></li></ul></li><li data-current="true" data-id="" data-disabled="" data-icon="fa&#x20;fa-file-text-o" data-shortcut="">
+  <a href="f?p=590:17:6063534202658:::::" title="" style="display: none" target="">My Scripts</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row is-selected is-current--top"></div>
+    <div role="none" class="a-TreeView-content is-selected is-current--top">
+      <span class="fa fa-file-o fa&#x20;fa-file-text-o"></span>
+      <span class="a-TreeView-label">My Scripts</span>
+    </div>
+  </div>
+</li>
+<li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-graduation-cap" data-shortcut="">
+  <a href="f?p=590:12:6063534202658:::::" title="" style="display: none" target="">My Tutorials</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-graduation-cap"></span>
+      <span class="a-TreeView-label">My Tutorials</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-cubes" data-shortcut="">
+  <a href="f?p=590:49:6063534202658:::::" title="" style="display: none" target="">Code Library</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-cubes"></span>
+      <span class="a-TreeView-label">Code Library</span>
+    </div>
+  </div>
+</li>    </ul>
+  </div>
+</div>
+<script>(sessionStorage.getItem("nav.590.preferenceForExpanded") === "true" && window.matchMedia("(min-width: " + getComputedStyle(document.documentElement).getPropertyValue("--js-mq-lg") + ")").matches) && document.getElementById('t_PageBody').classList.add('js-navExpanded');</script>
+<script>
+    const labels = document.querySelectorAll(".a-TreeView .a-TreeView-label");
+    for (const label of labels) {
+        label.textContent = label.textContent.replaceAll(/\[(.*?)\]/ig, '');
+    }
+</script>
+  <div class="t-Body-main">
+    <div class="t-Body-title" id="t_Body_title"><nav aria-label="Breadcrumb" id="R1009876328187585868"  class="t-BreadcrumbRegion t-BreadcrumbRegion--showBreadcrumb t-BreadcrumbRegion--useBreadcrumbTitle">
+  <div class="t-BreadcrumbRegion-top">
+    <div class="t-BreadcrumbRegion-body">
+      <div class="t-BreadcrumbRegion-breadcrumb"><ul class="t-Breadcrumb "><li class="t-Breadcrumb-item is-active" aria-current="page"><h1 class="t-Breadcrumb-label">My Scripts</h1></li></ul></div>
+        <div class="t-BreadcrumbRegion-title">
+        <h1 id="R1009876328187585868_heading" class="t-BreadcrumbRegion-titleText" data-apex-heading>Breadcrumb</h1>
+      </div>
+    </div>
+    <div class="t-BreadcrumbRegion-buttons"><button class="t-Button t-Button--icon t-Button--noUI&#x20;t-Button--iconLeft&#x20;t-Button--gapRight"  onclick="javascript:apex.theme42.dialog(&#x27;f?p=590:96:6063534202658:::RP,96::\u0026cs=3x1YXea44ACFLV81SKOf4yrkU45eJIk7zWdnFKFAu9payRxr6TTnP3kD_QeQYhbjpOj1mfbQKmk4bJpY51CttBA\u0026p_dialog_cs=0gW72Jv5GhF48crAKIBmVbH__a0fbIq3UwSdjSg-4cRrlwStlPxIaPAbJ1MWVzfynH7uTUgugFoaLwpfqVRjUg&#x27;,{title:&#x27;Upload Script&#x27;,h:&#x27;auto&#x27;,w:&#x27;720&#x27;,mxw:&#x27;960&#x27;,modal:true,dialog:null,dlgCls:&#x27;t-Dialog-page--wizard &#x27;+&#x27;&#x27;},&#x27;&#x27;,apex.jQuery(&#x27;#B1028714430554453121&#x27;))" type="button" id="B1028714430554453121"><span class="t-Icon t-Icon--left fa&#x20;fa-upload" aria-hidden="true"></span><span class="t-Button-label">Upload Script</span><span class="t-Icon t-Icon--right fa&#x20;fa-upload" aria-hidden="true"></span></button></div>
+  </div>
+  <div class="t-BreadcrumbRegion-bottom"></div>
+</nav>
+</div>
+    <div class="t-Body-side" id="t_Body_side"><div id="R7729916626169420" role="region" aria-label="Search Filters" class="padding-md"><div class="t-Form-fieldContainer t-Form-fieldContainer--hiddenLabel rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--text-field apex-item-wrapper--has-icon" id="P17_SEARCH_CONTAINER"><div class="t-Form-labelContainer t-Form-labelContainer--hiddenLabel col col-null">
+<label for="P17_SEARCH" id="P17_SEARCH_LABEL" class="t-Form-label u-VisuallyHidden">Search</label>
+</div><div class="t-Form-inputContainer col col-null"><div class="t-Form-itemWrapper"><input type="text"  id="P17_SEARCH" name="P17_SEARCH" placeholder="Search&#x20;My&#x20;Scripts" class="text_field&#x20;apex-item-text&#x20;apex-item-has-icon" value="" size="28" maxlength="4000" data-trim-spaces="NONE"  /><span class="apex-item-icon fa&#x20;fa-search" aria-hidden="true"></span></div><span id="P17_SEARCH_error_placeholder" class="a-Form-error" data-template-id="3114753988868898_ET"></span></div></div><div class="t-Form-fieldContainer t-Form-fieldContainer--stacked  apex-item-wrapper apex-item-wrapper--radiogroup " id="P17_ORDERING_CONTAINER"><div class="t-Form-labelContainer">
+<label for="P17_ORDERING" id="P17_ORDERING_LABEL" class="t-Form-label">Display By</label>
+</div><div class="t-Form-inputContainer"><div class="t-Form-itemWrapper"><div tabindex="-1"  id="P17_ORDERING" aria-labelledby="P17_ORDERING_LABEL" class="radio_group&#x20;apex-item-group&#x20;apex-item-group--rc&#x20;apex-item-radio"  role="group">
+<div class="apex-item-option"><input type="radio" id="P17_ORDERING_0" name="P17_ORDERING" data-display="Date&#x20;Last&#x20;Touched" value="M" checked="checked" ><label class="u-radio" for="P17_ORDERING_0">Date Last Touched</label></div>
+<div class="apex-item-option"><input type="radio" id="P17_ORDERING_1" name="P17_ORDERING" data-display="Date&#x20;Added" value="D"  ><label class="u-radio" for="P17_ORDERING_1">Date Added</label></div>
+<div class="apex-item-option"><input type="radio" id="P17_ORDERING_2" name="P17_ORDERING" data-display="Name" value="N"  ><label class="u-radio" for="P17_ORDERING_2">Name</label></div>
+<div class="apex-item-option"><input type="radio" id="P17_ORDERING_3" name="P17_ORDERING" data-display="Invocations" value="I"  ><label class="u-radio" for="P17_ORDERING_3">Invocations</label></div>
+<div class="apex-item-option"><input type="radio" id="P17_ORDERING_4" name="P17_ORDERING" data-display="Statements" value="S"  ><label class="u-radio" for="P17_ORDERING_4">Statements</label></div>
+</div>
+</div><span id="P17_ORDERING_error_placeholder" class="a-Form-error" data-template-id="3114986549868898_ET"></span></div></div><div class="t-Form-fieldContainer t-Form-fieldContainer--stacked  apex-item-wrapper apex-item-wrapper--radiogroup " id="P17_VISIBILITY_CONTAINER"><div class="t-Form-labelContainer">
+<label for="P17_VISIBILITY" id="P17_VISIBILITY_LABEL" class="t-Form-label">Visibility</label>
+</div><div class="t-Form-inputContainer"><div class="t-Form-itemWrapper"><div tabindex="-1"  id="P17_VISIBILITY" aria-labelledby="P17_VISIBILITY_LABEL" class="radio_group&#x20;apex-item-group&#x20;apex-item-group--rc&#x20;apex-item-radio"  role="group">
+<div class="apex-item-option"><input type="radio" id="P17_VISIBILITY_0" name="P17_VISIBILITY" data-display="All&#x20;My&#x20;Scripts" value="ALL" checked="checked" ><label class="u-radio" for="P17_VISIBILITY_0">All My Scripts</label></div>
+<div class="apex-item-option"><input type="radio" id="P17_VISIBILITY_1" name="P17_VISIBILITY" data-display="Private" value="SELF"  ><label class="u-radio" for="P17_VISIBILITY_1">Private</label></div>
+<div class="apex-item-option"><input type="radio" id="P17_VISIBILITY_2" name="P17_VISIBILITY" data-display="Publicly&#x20;Shareable" value="EMAIL"  ><label class="u-radio" for="P17_VISIBILITY_2">Publicly Shareable</label></div>
+<div class="apex-item-option"><input type="radio" id="P17_VISIBILITY_3" name="P17_VISIBILITY" data-display="Published" value="PUBLIC"  ><label class="u-radio" for="P17_VISIBILITY_3">Published</label></div>
+</div>
+</div><span id="P17_VISIBILITY_error_placeholder" class="a-Form-error" data-template-id="3114986549868898_ET"></span></div></div><div class="t-Form-fieldContainer t-Form-fieldContainer--stacked  apex-item-wrapper apex-item-wrapper--radiogroup " id="P17_AREA_CONTAINER"><div class="t-Form-labelContainer">
+<label for="P17_AREA" id="P17_AREA_LABEL" class="t-Form-label">Area</label>
+</div><div class="t-Form-inputContainer"><div class="t-Form-itemWrapper"><div tabindex="-1"  id="P17_AREA" aria-labelledby="P17_AREA_LABEL" class="radio_group&#x20;apex-item-group&#x20;apex-item-group--rc&#x20;apex-item-radio"  role="group">
+<div class="apex-item-option"><input type="radio" id="P17_AREA_0" name="P17_AREA" data-display="All" value="0" checked="checked" ><label class="u-radio" for="P17_AREA_0">All</label></div>
+</div>
+</div><span id="P17_AREA_error_placeholder" class="a-Form-error" data-template-id="3114986549868898_ET"></span></div></div><button class="t-Button t-Button--icon t-Button--simple&#x20;t-Button--iconLeft&#x20;t-Button--stretch&#x20;t-Button--gapTop"  onclick="apex.navigation.redirect(&#x27;f?p=590:17:6063534202658:::17,RIR::&#x27;);" type="button" id="B1015611412082059599"><span class="t-Icon t-Icon--left fa&#x20;fa-undo" aria-hidden="true"></span><span class="t-Button-label">Reset Search</span><span class="t-Icon t-Icon--right fa&#x20;fa-undo" aria-hidden="true"></span></button></div></div>
+    <div class="t-Body-content" id="t_Body_content">
+      <main class="t-Body-mainContent" id="main">
+        <span id="APEX_SUCCESS_MESSAGE" data-template-id="3035058897868850_S" class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE" data-template-id="3035058897868850_E" class="apex-page-error u-hidden"></span>
+        <div class="t-Body-fullContent"></div>
+        <div class="t-Body-contentInner"><div class="container">
+<div class="row ">
+<div class="col col-12 apex-col-auto col-start col-end" ><div id="R18601861340950806"  class=""><div id="report_18601861340950806_catch"><ul class="ls-CodeLibrary t-Report--hideNoPagination"  id="R18601861340950806_library" data-region-id="R18601861340950806">
+
+<li class="ls-CodeLibrary-item #SCRIPT_MODIFIERS#">
+  <div class="ls-Script">
+    <a href="f?p=590:43:6063534202658:::43:P43_ID:37773209586148815957880358042872080057&amp;cs=3-VcPEE0E7YkmPlmii38OkGqe63hC86bZGSlpB2QO6NxrftvZ7dO2glsZboZP9Vc7BPBYSzZDjP_2SV-noCEf-Q" class="ls-Script-wrap">
+      
+      <div class="ls-Script-details">
+        <h2 class="ls-Script-title">Session 05</h2>
+        <div class="ls-Script-desc">.</div>
+
+        <div class="ls-Script-meta">
+          <span class="ls-Script-tags"> </span>
+        </div>
+      </div>
+      
+      <div class="ls-Script-activity">
+        <span class="ls-Script-likes" title="Likes">                           0 <span class="fa fa-heart-o"></span> </span>
+        <span class="ls-Script-runs" title="Runs">0 <span class="fa fa-play-circle-o" aria-hidden="true"></span></span>
+      </div>
+      
+      <div class="ls-Script-stats">
+        <span class="ls-Script-date" title="Date"><span aria-hidden="true" class="fa fa-clock-o"></span> 10 minutes ago</span>
+        <span class="ls-Script-author" title="Author"><span aria-hidden="true" class="fa fa-eye"></span> Private</span>
+      </div>
+      
+    </a>
+  </div>
+</li>
+<li class="ls-CodeLibrary-item #SCRIPT_MODIFIERS#">
+  <div class="ls-Script">
+    <a href="f?p=590:43:6063534202658:::43:P43_ID:37773268463549061928574827062525737978&amp;cs=3IBU7AgkjIWgpN99lgLHSbnyXCUu4hsVujQ4fjrdG7MRipSXQQuhYYC7J9BWJSTqZs1067EK6rXbtypLBfnyFCA" class="ls-Script-wrap">
+      
+      <div class="ls-Script-details">
+        <h2 class="ls-Script-title">Session 04</h2>
+        <div class="ls-Script-desc">.</div>
+
+        <div class="ls-Script-meta">
+          <span class="ls-Script-tags"> </span>
+        </div>
+      </div>
+      
+      <div class="ls-Script-activity">
+        <span class="ls-Script-likes" title="Likes">                           0 <span class="fa fa-heart-o"></span> </span>
+        <span class="ls-Script-runs" title="Runs">0 <span class="fa fa-play-circle-o" aria-hidden="true"></span></span>
+      </div>
+      
+      <div class="ls-Script-stats">
+        <span class="ls-Script-date" title="Date"><span aria-hidden="true" class="fa fa-clock-o"></span> 10 minutes ago</span>
+        <span class="ls-Script-author" title="Author"><span aria-hidden="true" class="fa fa-eye"></span> Private</span>
+      </div>
+      
+    </a>
+  </div>
+</li>
+<li class="ls-CodeLibrary-item #SCRIPT_MODIFIERS#">
+  <div class="ls-Script">
+    <a href="f?p=590:43:6063534202658:::43:P43_ID:37767623519941851340133968235045364713&amp;cs=3yMNf2XpLUNhF4VoI1wQtF2q6p7psDu-78wxJl88IslvAyyGyGw6J2x-JTGK-di-WZs8xhgYX_Y0acD76NnGzJg" class="ls-Script-wrap">
+      
+      <div class="ls-Script-details">
+        <h2 class="ls-Script-title">Session 03</h2>
+        <div class="ls-Script-desc">.</div>
+
+        <div class="ls-Script-meta">
+          <span class="ls-Script-tags"> </span>
+        </div>
+      </div>
+      
+      <div class="ls-Script-activity">
+        <span class="ls-Script-likes" title="Likes">                           0 <span class="fa fa-heart-o"></span> </span>
+        <span class="ls-Script-runs" title="Runs">0 <span class="fa fa-play-circle-o" aria-hidden="true"></span></span>
+      </div>
+      
+      <div class="ls-Script-stats">
+        <span class="ls-Script-date" title="Date"><span aria-hidden="true" class="fa fa-clock-o"></span> 87 minutes ago</span>
+        <span class="ls-Script-author" title="Author"><span aria-hidden="true" class="fa fa-eye"></span> Private</span>
+      </div>
+      
+    </a>
+  </div>
+</li>
+<li class="ls-CodeLibrary-item #SCRIPT_MODIFIERS#">
+  <div class="ls-Script">
+    <a href="f?p=590:43:6063534202658:::43:P43_ID:37668189958117449253578197528618238434&amp;cs=35q3vk3xDjN3hZS0Icb0EGVdgpbnRv5odK7SOfVCVl27EjXvJoB9hGicKzqliyXnI9fEelD4K3B-8zJbz4dEOJQ" class="ls-Script-wrap">
+      
+      <div class="ls-Script-details">
+        <h2 class="ls-Script-title">Session 02</h2>
+        <div class="ls-Script-desc">select command</div>
+
+        <div class="ls-Script-meta">
+          <span class="ls-Script-tags"> </span>
+        </div>
+      </div>
+      
+      <div class="ls-Script-activity">
+        <span class="ls-Script-likes" title="Likes">                           0 <span class="fa fa-heart-o"></span> </span>
+        <span class="ls-Script-runs" title="Runs">0 <span class="fa fa-play-circle-o" aria-hidden="true"></span></span>
+      </div>
+      
+      <div class="ls-Script-stats">
+        <span class="ls-Script-date" title="Date"><span aria-hidden="true" class="fa fa-clock-o"></span> 24 hours ago</span>
+        <span class="ls-Script-author" title="Author"><span aria-hidden="true" class="fa fa-eye"></span> Private</span>
+      </div>
+      
+    </a>
+  </div>
+</li>
+<li class="ls-CodeLibrary-item #SCRIPT_MODIFIERS#">
+  <div class="ls-Script">
+    <a href="f?p=590:43:6063534202658:::43:P43_ID:37668892472323533823419770218351735752&amp;cs=32SGkB-dy1Wo8tpNAfoncCd5_kvHi5IN4KRUw2GlNyL1syrOAUn4K85aYKz7eujZNakzWyqTl0jKyz9Aa8lc6mA" class="ls-Script-wrap">
+      
+      <div class="ls-Script-details">
+        <h2 class="ls-Script-title">Session 01</h2>
+        <div class="ls-Script-desc">select command</div>
+
+        <div class="ls-Script-meta">
+          <span class="ls-Script-tags"> </span>
+        </div>
+      </div>
+      
+      <div class="ls-Script-activity">
+        <span class="ls-Script-likes" title="Likes">                           0 <span class="fa fa-heart-o"></span> </span>
+        <span class="ls-Script-runs" title="Runs">0 <span class="fa fa-play-circle-o" aria-hidden="true"></span></span>
+      </div>
+      
+      <div class="ls-Script-stats">
+        <span class="ls-Script-date" title="Date"><span aria-hidden="true" class="fa fa-clock-o"></span> 24 hours ago</span>
+        <span class="ls-Script-author" title="Author"><span aria-hidden="true" class="fa fa-eye"></span> Private</span>
+      </div>
+      
+    </a>
+  </div>
+</li>
+</ul>
+<table class="t-Report-pagination" role="presentation"><tr><td colspan="10" align="right" ><table role="presentation" ><tr><td class="pagination"></td><td class="pagination"></td><td nowrap="nowrap" class="pagination"><span class="t-Report-paginationText">row(s) 1 - 5 of 5</span></td><td class="pagination"></td><td class="pagination"></td></tr></table></td></tr></table></div></div></div>
+</div>
+</div></div>
+      </main>
+      <footer class="t-Footer" id="t_Footer" role="contentinfo">
+        <div class="t-Footer-body">
+          <div class="t-Footer-content"><div class="container">
+<div class="row ">
+<div class="col col-12 apex-col-auto col-start col-end" ><div id="R1012157221149035436"  class=""><span class="footer-sql"> 2024 Oracle</span> &middot; Live SQL 24.1.3, running Oracle Database 19c EE Extreme Perf - 19.17.0.0.0 &middot; <a href="https://docs.oracle.com/en/database/oracle/oracle-database/" target="_blank">Database Documentation</a>  &middot; <a href="https://asktom.oracle.com/pls/apex/f?p=100:::::::" target="_blank">Ask Tom</a> &middot; <a href="https://devgym.oracle.com" target="_blank">Dev Gym</a><br /><span class="u-BuiltWithAPEX">Built with <span class="fa fa-heart"><span class="u-VisuallyHidden">love</span></span> using <a href="https://apex.oracle.com/" target="_blank">Oracle APEX</a> &middot; <a href="http://www.oracle.com/us/legal/privacy/overview/index.html" target="_blank">Privacy</a>  &middot; <a href="http://www.oracle.com/us/legal/terms/index.html" target="_blank">Terms of Use</a> </span></div></div>
+</div>
+</div></div>
+          <div class="t-Footer-apex">
+            <div class="t-Footer-version">24.1.3</div>
+            <div class="t-Footer-customize"></div>
+            
+          </div>
+        </div>
+        <div class="t-Footer-top">
+          <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton"><span class="a-Icon icon-up-chevron"></span></a>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+<div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden" id="pPageFormRegionChecksums" value="&#x5B;&#x5D;">
+<input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected" value="&#x2F;JryQ4Rbi0DUkZuvHMjivzWidMMwCoHG3ONRcTo9N9CGkONgpHAD5-HK_mUxgD8jSCe-hPuc8j2Clog9Fp9h3LQ" /></form>
+
+
+<script>
+var apex_img_dir = "\u002Fi\u002F";
+var apex = {env: {APP_USER: "BHUMIKAMBLE714@GMAIL.COM",APP_ID: "590",APP_PAGE_ID: "17",APP_SESSION: "6063534202658",APP_FILES: "r\u002Flivesql\u002F590\u002Ffiles\u002Fstatic\u002Fv486\u002F",WORKSPACE_FILES: "r\u002Flivesql\u002Ffiles\u002Fstatic\u002Fv1\u002F",APEX_VERSION: "22.1.3",APEX_BASE_VERSION: "22.1"},
+libVersions:{ckeditor5:"32.0.0",cropperJs:"1.5.12",domPurify:"2.3.1",hammer:"2.0.8",jquery:"3.6.0",jqueryUi:"1.13.1",maplibre:"1.15.2",markedJs:"4.0.12",prismJs:"1.26.0",oraclejet:"12.0.0",monacoEditor:"0.32.1",lessJs:"4.1.1"}};
+</script>
+<script src="/i/libraries/apex/minified/desktop_all.min.js?v=22.1.3"></script>
+<script src="wwv_flow.js_messages?p_app_id=590&p_lang=en&p_version=22.1.3-146472856932"></script>
+
+<script type="text/javascript">
+apex.da.initDaEventList = function(){
+apex.da.gEventList = [
+{"triggeringElementType":"BUTTON","triggeringButtonId":"B1028714430554453121","bindType":"bind","bindEventType":"apexafterclosedialog","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"affectedElementsType":"REGION","affectedRegionId":"R18601861340950806",javascriptFunction:apex.da.refresh,"action":"NATIVE_REFRESH"}]},
+{"triggeringElementType":"ITEM","triggeringElement":"P17_ORDERING,P17_VISIBILITY,P17_AREA","bindType":"bind","bindEventType":"change","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"affectedElementsType":"REGION","affectedRegionId":"R18601861340950806",javascriptFunction:apex.da.refresh,"action":"NATIVE_REFRESH"}]},
+{"triggeringElementType":"ITEM","triggeringElement":"P0_DARKMODE","bindType":"bind","bindEventType":"change","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ $( "body" )
+    .toggleClass( "is-darkmode", apex.items.P0_DARKMODE.value == 'Y' )
+    .trigger( "theme-change" );
+},"action":"NATIVE_JAVASCRIPT_CODE"},{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"waitForResult":true,javascriptFunction:apex.da.executePlSqlCode,"ajaxIdentifier":"REEgVFlQRX5-NDIzNTg3NTQ4MTExNTEwOQ\u002FqZwHFJhnmc24UPS5tTctZ9Bv2IMbDzqBA8DdX3HE3uZKKM6_DHD-ksAzXWSYakXpGnUkSHhew6RIYl_R0drTBg","attribute01":"#P0_DARKMODE","attribute04":"N","action":"NATIVE_EXECUTE_PLSQL_CODE"}]}];
+}
+</script>
+
+<script src="/i/libraries/apex/minified/widget.stickyWidget.min.js?v=22.1.3"></script>
+<script src="/i/themes/theme_42/22.1/js/theme42.min.js?v=22.1.3"></script>
+
+
+<script src="r/livesql/590/files/static/v486/js/script.min.js"></script>
+<script src="r/livesql/590/files/static/v486/table2CSV.js"></script>
+<script src="/i/libraries/apex/minified/widget.apexTabs.min.js?v=22.1.3"></script>
+
+  
+
+
+<script src="/i/libraries/apex/minified/widget.treeView.min.js?v=22.1.3"></script>
+<script src="/i/libraries/apex/minified/widget.report.min.js?v=22.1.3"></script>
+
+
+
+
+
+<script type="text/javascript">
+apex.session.initTimeouts(300,{"idle_time_ms":3600000,"life_time_ms":28043000,"max_idle_time_ms":3600000},'f?p=590:1000:::LEVEL1:::','f?p=590:1000:::LEVEL1:::');
+apex.jQuery( function() {
+apex.page.init( this, function() {
+try {
+(function(){apex.widget.yesNo("P0_DARKMODE","SWITCH_CB");})();
+(function(){apex.jQuery('body').addClass('t-PageBody--leftNav');})();
+(function(){apex.widget.checkboxAndRadio("#P17_ORDERING","radio",{"ajaxIdentifier":"SVRFTSBUWVBFfjUxMjB-MTAxNjEwNzQwNjU1MzYyNzY0Ng\u002Fbbucxq9v-ab4QQydjCWS_RuUJGMrEgi0tji6Se-SgnZn2Nb5OTK78hodqdU1rI_Bam2rdTW0xRmYKEYAHky51A","optimizeRefresh":true,"inputName":"P17_ORDERING"});})();
+(function(){apex.widget.checkboxAndRadio("#P17_VISIBILITY","radio",{"ajaxIdentifier":"SVRFTSBUWVBFfjUxMjB-MTAxNjExMDgyMzc0NDY5NTY1OQ\u002Fc8lPG1Gs9lvXNKhhv6i7cGsUwJFW-6wWkdzG_5QFVhQ69qqUYP8eqKnou78s3RZ8UqoPXN9Ie4VdzRNdKCfkgQ","optimizeRefresh":true,"inputName":"P17_VISIBILITY"});})();
+(function(){apex.widget.checkboxAndRadio("#P17_AREA","radio",{"ajaxIdentifier":"SVRFTSBUWVBFfjUxMjB-NzgxMTI3MDIwODIwMzM3MA\u002FjqfzkiOjwGLkEezjHnDNedClQIP5cNEAvtk6Xuv_CVbtsljFJYLO4I0067xEzUgwqtLsCe6uJBUcF4w1YnnIRw","optimizeRefresh":true,"nullValue":"0","inputName":"P17_AREA"});})();
+(function(){apex.widget.report.init("R18601861340950806","UkVHSU9OIFRZUEV-fjE4NjAxODYxMzQwOTUwODA2\u002FdwiRHaRNyJt-6kNXnlLcwxsJ5et5cO8I1_iNwRn9xwPMqtLkY3tzXQru7E1lwHkGacD6k-dZZOgXJRLgXA3YHA",{"pageItems":"#P17_SEARCH,#P17_VISIBILITY,#P17_AREA,#P17_ORDERING","lazyLoading":false,"internalRegionId":"18601861340950806"});})();
+} catch(e) {apex.debug.error(e)};
+apex.item.waitForDelayLoadItems().done(function() {
+try {
+(function(){apex.da.initDaEventList();
+apex.da.init();})();
+apex.theme42.initializePage.leftSideCol();
+
+} finally {
+apex.event.trigger(apex.gPageContext$,'apexreadyend');
+};
+});
+});
+});apex.pwa.registerServiceWorker('\u002Fapex\u002Fr\u002Flivesql\u002Flivesql\u002Fsw.js?v=22.1.3-146472856932\u0026lang=en');
+</script>
+
+</body>
+</html>
